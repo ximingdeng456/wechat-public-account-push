@@ -1,27 +1,49 @@
-{
-# 公众号配置
-# 公众号appId
-"app_id": "wx762b5461d6393cf7",
-# 公众号appSecret
-"app_secret": "9550d86c5f4bbee814824122552d7334",
-# 模板消息id
-"template_id": "P3AWQVJOd4X30fEhArzFbspw3p9BC-NLxFbYjfim6Mc",
-# 接收公众号消息的微信号，如果有多个，需要在[]里用英文逗号间隔，例如["wx1", "wx2"]
-"user": ["oL0WO5wJ5jtZ3QPZCfrx5tkAqmw8"],
+/* eslint-disable */
+const USER_CONFIG = {
+  /**
+   * 公众号配置
+   */
 
-# 信息配置
-# 所在城市
-"city1":"东莞"
-"city2":"长阳"
-# 天气
-"weather": "东莞"
-"weather2": "长阳"
-# 距离你的生日还有
-"birthday_left": {"birthday": "1997-04-17"},
-# 今天是我们在一起的第
-"love_days": "2020-04-27",
-# 金句中文，如果为空，默认会读取金山的每日金句
-"note_ch": "",
-# 金句英文
-"note_en": ""
+  // 公众号APP_ID
+  // 建议不要填这里，请使用文档中github secret的方法进行保密配置，保护您的隐私安全。
+  // 如果你非要填这里也行。脚本也能运行
+  APP_ID: 'wx762b5461d6393cf7',
+
+  // 公众号APP_SECRET
+  // 建议不要填这里，请使用文档中github secret的方法进行保密配置，保护您的隐私安全。
+  // 如果你非要填这里也行。脚本也能运行
+  APP_SECRET: '9550d86c5f4bbee814824122552d7334',
+
+    /** 天气 */
+    weather: 东莞,
+    weather2: 长阳,
+    /** 节假日 */
+    // 下一休息日综合提醒
+    holidaytts: true,
+    /** 当前气温 */
+    temp: true,
+    /** 每日一句 */
+    // 金山每日一句
+    CIBA: true,
+  
+    /** 今天是我们在一起的第 */
+    love_days: 2020-04-27,
+
+      // 所在城市
+      city1: '东莞',
+      city2: '长阳',
+     
+        {
+          type: '生日', name: '臭宝', year: '1997', date: '04-17',
+        },
+        
+      // 专属纪念日/倒数日，如果你在这里填写了纪念日/倒数日，就不会计算CUSTOMIZED_DATE_LIST的日子了, 和CUSTOMIZED_DATE_LIST的配置方法相同，可以往下查看，我这里就不重复写了
+      customizedDateList: [
+        // 在一起的日子
+        { keyword: 'love_day', date: '2022-04-27' },
+       
+       
+
 }
+
+module.exports = USER_CONFIG
